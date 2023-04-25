@@ -178,8 +178,8 @@ section{
 #secao-musicas ul{
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
-    margin-top: 5rem;
+    gap: 4rem;
+    margin-top: 2rem;
 }
 
 #secao-musicas li{
@@ -187,19 +187,13 @@ section{
     position: relative;
     cursor: pointer;
 }
+#secao-musicas h3{
+    font-size: 3rem;
+}
 
 .card{
     position: relative;
     cursor: pointer;
-}
-
-.card:hover .card-image{
-    opacity: .2;
-}
-
-.card:hover .card-info{
-    opacity: 1;
-    bottom: 20%;
 }
 
 .card-image img{
@@ -213,14 +207,21 @@ section{
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: 1rem;
+    bottom: 0;
     opacity: 0;
     transition: opacity .10s, bottom .5s;
     padding: 2rem;
     gap: 1rem;
     color: #FFF;
 }
+#secao-musicas li:hover .card-info{
+    opacity: 1;
+    bottom: 20%;
+}
 
+#secao-musicas li:hover .card-image img{
+    opacity: .5;
+}
 #secao_orcamento{
     display: flex;
     justify-content: center;
