@@ -1,30 +1,22 @@
-//console.log( document.querySelector("#quantidade").value )
-//manipulacao do DOM (document object model) interpretação do html na memoria do navegador
+document.querySelector("#quantidade").addEventListener("change", indicar)
+document.querySelector("#js").addEventListener("change", indicar)
+document.querySelector("#layout_sim").addEventListener("change", indicar)
+document.querySelector("#layout_nao").addEventListener("change", indicar)
+document.querySelector("#range").addEventListener('input', function() {
+  document.querySelector('#range-value').textContent = this.value === '1' ? 'Já foi lançado' : this.value === '2' ? 'Está lançando hoje' : 'Será lançado futuramente';
+  indicar();
+});
 
-document.querySelector("#quantidade").addEventListener("change", calcular_orcamento)
-document.querySelector("#js").addEventListener("change", calcular_orcamento)
-document.querySelector("#layout_sim").addEventListener("change", calcular_orcamento)
-document.querySelector("#layout_nao").addEventListener("change", calcular_orcamento)
-document.querySelector("#prazo").addEventListener("change", calcular_orcamento)
-
-function calcular_orcamento() {
-    //let quantidade = document.querySelector("#quantidade").value
-    let preco = quantidade.value * 100
-    
-    //let js = document.querySelector("#js").checked
-    if (js.checked) preco *= 1.1
-
-    //let layout = document.querySelector("#layout_sim").checked
-    if (layout_sim.checked) preco += 500
-
-    //let prazo = document.querySelector("#prazo").value
-    let taxa_de_urgencia = preco * (1.1 - prazo.value * 0.1)
-    preco += taxa_de_urgencia
-
-    //document.querySelector("#label_prazo").innerHTML = "Prazo (" + prazo + " semanas)"
-    label_prazo.innerHTML = `Prazo (${prazo.value} semanas)`
-
-    //document.querySelector("#preco").innerHTML = "R$ " + preco.toFixed(2)
-    output.innerHTML = "R$ " + preco.toFixed(2)
-
+function indicar() {
+    const album = document.querySelector("#texto").value
+    const quantidade = document.querySelector("#quantidade").value
+    const disponivel = document.querySelector("#js").checked
+    const nacionalidade = document.querySelector("#layout_sim").checked ? "brasileiro" : "estrangeiro"
+    const lancamento = document.querySelector("#range-value").textContent
 }
+
+const btnEnviar = document.createElement("button")
+btnEnviar.innerHTML = "Enviar"
+btnEnviar.setAttribute("type", "submit")
+document.querySelector("#secao_indicacao form").appendChild(btnEnviar)
+btnEnviar.addEventListener("click", function() {alert("Enviado!")})
