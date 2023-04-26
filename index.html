@@ -58,14 +58,14 @@
     </header>
 
     <section id="secao-noticias">
-        <img class ="avatar large-only" src="./assets/images/anacastela.jpg" alt="ana castela">
+        <img class="avatar large-only" src="./assets/images/anacastela.jpg" alt="ana castela">
         <div id="texto-noticias">
             <h2>Cultura nacional</h2>
             <p>Conheça as novidades da música brasileira em primeira mão</p>
             <a href="#secao-musicas" class="botao">Descubra mais</a>
         </div>
     </section>
-    
+
     <section id="secao-musicas">
         <ul>
             <li class="card">
@@ -90,49 +90,48 @@
             </li>
             <li class="card">
                 <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1573495628363-04667cedc587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="">
+                    <img src="./assets/images/cabelinho.jpg" alt="">
                 </div>
                 <div class="card-info">
-                    <h3>Projects</h3>
-                    <h4>https, python</h4>
-                    <p>Projetos anteriores</p>
+                    <p>Descubra</p>
+                    <h4>Conheça cantores emergentes e as novas apostas para o futuro da música brasileira</h4>
+                    <h3>Confira</h3>
                 </div>
             </li>
         </ul>
     </section>
 
-    <section id="secao_orcamento">
+    <section id="secao_indicacao">
         <form action="">
             <h3>Indicações</h3>
-            
-            <label for="texto">Indique um álbum</label>
+
+            <label for="texto">Indique um álbum para divulgação</label>
             <input type="text" id="texto" maxlength="50">
-            
-            <label for="quantidade">Quantidade de páginas</label>
+
+            <label for="quantidade">Quantidade de músicas</label>
             <input type="number" id="quantidade" min="1" value="5">
-            
-            <label for="js">Precisa de JavaScript?</label>
+
+            <label for="js">Está disponível em plataformas de áudio? (Ex.: Spotify, Apple Music)</label>
             <input type="checkbox" id="js">
-            
-            <label for="layout">Precisa de layout?</label>
+
+            <label for="layout">Pertence a um cantor/banda brasileiro?</label>
             <div>
                 <input type="radio" id="layout_sim" name="layout">
-                <label for="layout_sim">Sim,preciso de layout</label>
-                
+                <label for="layout_sim">Sim</label>
+
                 <input type="radio" id="layout_nao" name="layout">
-                <label for="layout_nao">Não, já tenho</label>
+                <label for="layout_nao">Não</label>
             </div>
-            
-            <label for="prazo" id = "label_prazo" >Prazo</label>
-            <input type="range" id="prazo" min="1" max="10">
-            
-            <output id="output">R$0,00</output>
+
+            <label for="range">Status de lançamento do álbum</label>
+            <input type="range" id="range" min="1" max="3">
+            <output id="range-value"></output>
+
         </form>
     </section>
-    
-<script src = "./assets/js/script.js"></script>
-<script src="./assets/js/menu.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/menu.js"></script>
 </body>
 
 </html>
-
